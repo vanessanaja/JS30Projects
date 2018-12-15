@@ -30,7 +30,22 @@ body,html {
     color: white;
     background-color: rgba(0,0,0,0.4);
     text-shadow: 0 0 0.5rem black;
+}
 
-    
+.playing {
+    transform: scale(1.1);
+    border-color: turquoise;
+    box-shadow: 0 0 1rem turquoise;
+}
 
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: turquoise;
 }
