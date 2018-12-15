@@ -24,12 +24,12 @@ body,html {
     margin: 1rem;
     font-size: 1.5rem;
     padding: 1rem .5rem;
-    transition: all 0.7 ease;
+    transition: all .07 ease;
     width: 10rem;
     text-align: center;
     color: white;
     background-color: rgba(0,0,0,0.4);
-    text-shadow: 0 0 0.5rem black;
+    text-shadow: 0 0 .5rem black;
 }
 
 .playing {
