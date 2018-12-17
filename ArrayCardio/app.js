@@ -18,10 +18,7 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
 //1. filter the list of inventors to those that were born in the 1500s.
-const fifteen = inventors.filter(function(inventor){
- if(inventor.year >= 1500 && inventor.year <=1599) {
-     return inventor;
-    }
-});
+const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.year <=1599
+);
 console.table(fifteen);
 
