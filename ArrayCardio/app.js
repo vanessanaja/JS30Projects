@@ -39,3 +39,11 @@ const totalYears = inventors.reduce((total, inventor) => {
 }, 0);
 console.log(totalYears);
 
+//5. sort inventors by years lived
+const yearsLived = inventors.sort(function(a, b){
+    let ageOlder = a.passed - a.year;
+    let ageYounger = b.passed - b.year;
+    return ageYounger < ageOlder ? 1 : -1
+});
+console.table(yearsLived);
+
