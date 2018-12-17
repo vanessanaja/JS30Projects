@@ -47,3 +47,13 @@ const yearsLived = inventors.sort(function(a, b){
 });
 console.table(yearsLived);
 
+//6. create a list of boulevards in Paris that contain de in any part of the name
+// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+const category = document.querySelector('.mw-category');
+const links = Array.from(category.querySelectorAll('a'));
+
+const de = links
+        .map(link => link.textContent)
+        .filter(streetName => streetName.includes('de'));
+
