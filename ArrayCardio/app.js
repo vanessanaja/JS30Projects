@@ -23,5 +23,5 @@ const fifteen = inventors.filter(function(inventor){
      return inventor;
     }
 });
-
+console.table(fifteen);
 
