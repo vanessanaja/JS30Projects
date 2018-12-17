@@ -50,10 +50,20 @@ console.table(yearsLived);
 //6. create a list of boulevards in Paris that contain de in any part of the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
-const category = document.querySelector('.mw-category');
-const links = Array.from(category.querySelectorAll('a'));
+// const category = document.querySelector('.mw-category');
+// const links = Array.from(category.querySelectorAll('a'));
 
-const de = links
-        .map(link => link.textContent)
-        .filter(streetName => streetName.includes('de'));
+// const de = links
+//         .map(link => link.textContent)
+//         .filter(streetName => streetName.includes('de'));
 
+//7. sort the people alphabetically by last name
+const alpha = people.sort(function(a, b){
+    const [alast, afirst]= a.split(', ');
+    const [blast, bfirst]= b.split(', ');
+    return alast > blast ? 1 : -1
+});
+console.log(alpha);
+
+    // 8. Reduce Exercise
+    // Sum up the instances of each of these
