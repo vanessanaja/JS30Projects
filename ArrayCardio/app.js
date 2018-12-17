@@ -23,8 +23,8 @@ const fifteen = inventors.filter(inventor => inventor.year >= 1500 && inventor.y
 console.table(fifteen);
 
 //2. give an array of inventors first and last names.
-const firstLastName = inventors.map(function(inventor) {
+const fullName = inventors.map(function(inventor) {
     return (inventor.first + ' ' + inventor.last);
 });
-console.table(firstLastName);
+console.table(fullName);
 
