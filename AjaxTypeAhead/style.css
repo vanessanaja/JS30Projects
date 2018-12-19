@@ -61,7 +61,7 @@ input.search {
 
 .suggestions li :nth-child(odd) {
     transform: perspective(100px) rotateX(-3deg) translate(3px);
-    background: linear-gradient(to bottom, green     0%, green 100%);
+    background: linear-gradient(to bottom, turquoise    0%, aqua 100%);
 }
 
 span.population {
