@@ -4,4 +4,4 @@ const cities = [];
 
 fetch(endpoint)
     .then(blob => blob.json())
-    .then(data => console.log(data))
+    .then(data => cities.push(...data))
