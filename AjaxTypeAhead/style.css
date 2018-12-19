@@ -54,14 +54,14 @@ input.search {
     text-transform: capitalize;
 }
 
-.suggestions li :nth-child(even)    {
+.suggestions li:nth-child(even)    {
     transform: perspective(100px) rotateX(3deg) translate(2px) scale(1.001);
     background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%);
 }
 
-.suggestions li :nth-child(odd) {
+.suggestions li:nth-child(odd) {
     transform: perspective(100px) rotateX(-3deg) translate(3px);
-    background: linear-gradient(to bottom, turquoise    0%, aqua 100%);
+    background: linear-gradient(to bottom, #ffffff    0%, #EFEFEF 100%);
 }
 
 span.population {
@@ -69,5 +69,6 @@ span.population {
 }
 
 .hl {
-    background-color: blueviolet;
+    background: aqua;
 }
+
