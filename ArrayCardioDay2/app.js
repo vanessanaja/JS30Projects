@@ -15,11 +15,18 @@ const comments = [
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
-    const isAdult = people.some(function(person){
+    // const isAdult = people.some(function(person){
+    //   const currentYear = (new Date()).getFullYear();
+    //   if(currentYear - person.year >18) {
+    //     return true;
+    //   }
+    // });
+
+    // console.log(isAdult);
+
+    const isAdult = people.some(person => {
       const currentYear = (new Date()).getFullYear();
-      if(currentYear - person.year >18) {
-        return true;
-      }
+        return currentYear - person.year >18;
     });
 
     console.log(isAdult);
