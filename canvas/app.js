@@ -12,10 +12,11 @@ ctx.lineWidth = '100';
 let isDrawing = false; 
 let lastX = 0;
 let lastY = 0;
+let hue = 0;
 
 function draw(e) {
   if(!isDrawing) return; //stop function from running when not mousedown
-  ctx.beginPath();
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`; //100% saturation 50% lightness
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(e.offsetX, e.offsetY);
   ctx.stroke();
