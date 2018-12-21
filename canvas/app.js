@@ -15,6 +15,10 @@ let lastY = 0;
 function draw(e) {
   if(!isDrawing) return; //stop function from running when not mousedown
   console.log(e);
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
 }
 
 canvas.addEventListener('mousemove', draw);
