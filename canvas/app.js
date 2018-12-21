@@ -6,21 +6,38 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = '100';
+ctx.lineWidth = 100;
+ctx.globalCompositeOperation = 'multiply';
 
 //only draw when mousedown
 let isDrawing = false; 
 let lastX = 0;
 let lastY = 0;
 let hue = 0;
+let direction = true;
 
 function draw(e) {
   if(!isDrawing) return; //stop function from running when not mousedown
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`; //100% saturation 50% lightness
-  ctx.moveTo(lastX, lastY);
+  ctx.beginPath(); // start from
+  ctx.moveTo(lastX, lastY); //go to
   ctx.lineTo(e.offsetX, e.offsetY);
   ctx.stroke();
   [lastX, lastY] = [e.offsetX, e.offsetY];
+  hue++; //change color as we draw
+  
+  if(hue >=360) {
+    hue = 0;
+  }
+  if(ctx.lineWidth >= 100 || ctx.lineWidth <=1){
+    direction = !direction;
+  }
+  if(direction){
+    ctx.lineWidth++;
+  } else {
+    ctx.lineWidth--;
+  }
+  
 }
 
 canvas.addEventListener('mousemove', draw);
