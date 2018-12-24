@@ -46,4 +46,9 @@ toggle.addEventListener('click', togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
 ranges.forEach(ranges => ranges.addEventListener('change', handleRangeUpdate));
 ranges.forEach(ranges => ranges.addEventListener('mousemove', handleRangeUpdate));
+
+let mousedown = false;
 progress.addEventListener('click', scrub);
+progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+progress.addEventListener('mousedown', () => mousedown = true);
+progress.addEventListener('mouseup', () => mousedown = false);
