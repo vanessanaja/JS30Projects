@@ -25,7 +25,7 @@ function skip(){
 }
 
 function handleRangeUpdate(){
-  console.log(this.value);
+  video[this.name] = this.value;
 }
 
 video.addEventListener('click', togglePlay);
