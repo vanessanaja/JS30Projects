@@ -187,7 +187,12 @@
 
   console.log(timeNodes);
   // turn node list into string of times
-  const seconds = timeNodes.map(node => node.dataset.time);
+  const seconds = timeNodes
+    .map(node => node.dataset.time)
+    .map(timeCode => {
+      const [min, secs] = timeCode.split(':');
+      console.log(min, secs);
+    })
 
 </script>
 </body>
