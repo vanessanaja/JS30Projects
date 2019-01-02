@@ -192,8 +192,8 @@
     .map(timeCode => {
       const [min, secs] = timeCode.split(':').map(parseFloat);
       return (min * 60) + secs;
-      
     })
+    .reduce((total, vidSeconds) => total + vidSeconds)
 
 </script>
 </body>
