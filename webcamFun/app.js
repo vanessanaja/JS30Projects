@@ -13,7 +13,19 @@ function getVideo(){
   })
   .catch(err => {
     console.error("Oh No!!!", err);
-  })
+  });
 }
+
+function painttoCanvas(){
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+  
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);/* start at top left corner (0,0) & paint width & height*/
+  }, 16);
+}
+
 
 getVideo();
