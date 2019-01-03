@@ -16,7 +16,7 @@ function getVideo(){
   });
 }
 
-function painttoCanvas(){
+function paintToCanvas(){
   const width = video.videoWidth;
   const height = video.videoHeight;
   canvas.width = width;
@@ -27,5 +27,12 @@ function painttoCanvas(){
   }, 16);
 }
 
+function takePhoto(){
+  snap.currentTime = 0;
+  snap.play();
+}
+
 
 getVideo();
+
+video.addEventListener('canplay', paintToCanvas);
