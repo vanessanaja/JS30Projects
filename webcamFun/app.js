@@ -28,8 +28,16 @@ function paintToCanvas(){
 }
 
 function takePhoto(){
+  //play sound
   snap.currentTime = 0;
   snap.play();
+  //take data out of the canvas
+  const data = canvas.toDataURL('image/jpeg');
+  const link = document.createElement('a');
+  link.href = data;
+  link.setAttribute('download', 'wonderful');
+  link.innerHTML = `<img src='${data}' alt='wonderful'/>`;
+  strip.insertBefore(link, strip.firstChild);
 }
 
 
