@@ -4,7 +4,8 @@ highlight.classList.add('highlight');
 document.body.append(highlight);
 
 function highlightLink (){
-  console.log('HIghlight!');
+  const linkCoords = this.getBoundingClientRect();
+  console.log(linkCoords);
 }
 
 triggers.forEach(a => 
