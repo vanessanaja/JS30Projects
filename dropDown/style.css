@@ -71,7 +71,7 @@ nav ul {
 
 .trigger-enter-active .dropdown {
   opacity: 1;
-}
+} */
 
 .dropdownBackground {
   width: 100px;
@@ -88,7 +88,7 @@ nav ul {
 }
 
 .dropdownBackground.open {
-  opacity: 1;
+  opacity: 1; 
 }
 
 .arrow {
@@ -106,29 +106,29 @@ nav ul {
   justify-content: center;
   align-items: center;
   line-height: 1.7;
-}
+} */
 
-.bio img {
+/* .bio img {
   float: left;
   margin-right: 20px;
-}
+} */
 
-.courses {
+/* .courses {
   min-width: 300px;
-}
+} */
 
-.courses li {
+/* .courses li {
   padding: 10px 0;
   display: block;
   border-bottom: 1px solid rgba(0,0,0,0.2);
-}
+} */
 
-.dropdown a {
+/* .dropdown a {
   text-decoration: none;
   color: #ffc600;
-}
+} */
 
-a.button {
+/* a.button {
   background: black;
   display: block;
   padding: 10px;
