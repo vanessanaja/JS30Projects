@@ -53,7 +53,7 @@ nav ul {
 }
 
 .dropdown {
-  opacity: 0;
+  opacity: 0; 
   position: absolute;
   overflow: hidden;
   padding: 20px;
@@ -71,7 +71,7 @@ nav ul {
 
 .trigger-enter-active .dropdown {
   opacity: 1;
-} */
+} 
 
 .dropdownBackground {
   width: 100px;
@@ -108,33 +108,33 @@ nav ul {
   line-height: 1.7;
 } */
 
-/* .bio img {
+.bio img {
   float: left;
   margin-right: 20px;
-} */
+} 
 
-/* .courses {
+.courses {
   min-width: 300px;
-} */
+} 
 
-/* .courses li {
+.courses li {
   padding: 10px 0;
   display: block;
   border-bottom: 1px solid rgba(0,0,0,0.2);
-} */
+} 
 
-/* .dropdown a {
+.dropdown a {
   text-decoration: none;
   color: #ffc600;
-} */
+} 
 
-/* a.button {
+ a.button {
   background: black;
   display: block;
   padding: 10px;
   color: white;
   margin-bottom: 10px;
-}
+} 
 
 /* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
 .button[href*=twitter] { background: #019FE9; }
