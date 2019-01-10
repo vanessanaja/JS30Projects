@@ -23,7 +23,7 @@ function handleEnter(){
     left: dropdownCoords.left - navCoords.left
   };
   background.style.setProperty('width', `${coords.width}px`);
-  background.style.setProperty('height', `${coords.heights}px`);
+  background.style.setProperty('height', `${coords.height}px`);
   background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`);
 }
 
