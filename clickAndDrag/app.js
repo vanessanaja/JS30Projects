@@ -17,6 +17,10 @@ slider.addEventListener('mouseup', () => {
   isDown = false;
   slider.classList.remove('active');
 });
-slider.addEventListener('mousemove', () => {
+slider.addEventListener('mousemove', (e) => {
   if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = x- startX;
+  console.log(walk);
 });
