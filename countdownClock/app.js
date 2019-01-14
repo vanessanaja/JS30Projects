@@ -7,6 +7,7 @@ function timer(seconds){
   const now = Date.now();
   const then = now + seconds *1000;
   displayTimeLeft(seconds);
+  displayEndTime(then);
 
   countDown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
@@ -31,6 +32,7 @@ function displayTimeLeft(seconds){
 function displayEndTime(timeStamp){
   const end = new Date(timeStamp);
   const hour = end.getHours();
-  const minute = end.getMinutes();
-  endTime.textContent = `Be Back at ${hour}:${minute}`;
+  const adjustedHour = hour > 12 ? hour - 12 : hour;
+  const minutes = end.getMinutes();
+  endTime.textContent = `Be Back at ${adjustedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
 }
