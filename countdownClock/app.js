@@ -38,6 +38,9 @@ function displayEndTime(timeStamp){
   endTime.textContent = `Be Back at ${adjustedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
 }
 
-
+function startTimer(){
+  const seconds = parseInt(this.dataset.time);
+  timer(seconds);
+}
 
 buttons.forEach(button => button.addEventListener('click', startTimer));
