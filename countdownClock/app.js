@@ -1,5 +1,6 @@
 let countDown;
 const timerDisplay = document.querySelector('.display__time-left');
+const endTime = document.querySelector('.display__end-time');
 
 
 function timer(seconds){
@@ -23,5 +24,13 @@ function displayTimeLeft(seconds){
   const minutes = Math.floor(seconds / 60);
   const remainderSeconds = seconds % 60; 
   const display = `${minutes}:${remainderSeconds < 10 ? '0' : ''}${remainderSeconds}`;
+  document.title = display;
   timerDisplay.textContent = display;
+}
+
+function displayEndTime(timeStamp){
+  const end = new Date(timeStamp);
+  const hour = end.getHours();
+  const minute = end.getMinutes();
+  endTime.textContent = `Be Back at ${hour}:${minute}`;
 }
